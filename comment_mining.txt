@@ -28,10 +28,6 @@ print("=== [빈도수 상위 5개 단어] ===")
 for word, count in top_5:
     print(f"{word}: {count}회")
 
-
-# ==========================================
-# [Step 3] 동시 출현 단어 분석 (행 단위)
-# ==========================================
 co_word = []
 
 for target_word, target_freq in top_5:
@@ -62,4 +58,5 @@ for target_word, target_freq in top_5:
         })
 
 df_final = pd.DataFrame(co_words)
+
 print(result_df)
