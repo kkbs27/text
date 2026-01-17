@@ -24,10 +24,8 @@ for nouns_list in df['nouns']:
 result = Counter(all_nouns)
 top_5 = result.most_common(5)
 
-print("=== [빈도수 상위 5개 단어] ===")
-for word, count in top_5:
-    print(f"{word}: {count}회")
 
+### 동시출현 단어 ###
 co_word = []
 
 for target_word, target_freq in top_5:
@@ -60,3 +58,4 @@ for target_word, target_freq in top_5:
 df_final = pd.DataFrame(co_words)
 
 print(result_df)
+
